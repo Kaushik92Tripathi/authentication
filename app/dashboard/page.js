@@ -1,6 +1,7 @@
 import { auth } from "../_lib/auth";
 import SignOutButton from '../_components/SignOutButton';
 import { FaUser, FaEnvelope, FaClock, FaProjectDiagram, FaCheckCircle, FaUsers, FaPhone, FaGlobe, FaBuilding } from 'react-icons/fa';
+import Image from 'next/image';
 
 // Function to fetch users
 async function getUsers() {
@@ -23,9 +24,11 @@ export default async function Page() {
           <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-2">
-              <img
+              <Image
                 src={session.user.image}
                 alt={session.user.name}
+                width={40}
+                height={40}
                 className="h-10 w-10 rounded-full border-2 border-blue-200"
                 referrerPolicy="no-referrer"
               />
@@ -38,7 +41,6 @@ export default async function Page() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-8">
-    
         {/* Users Section */}
         <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
           <div className="border-b border-gray-200 px-6 py-4 flex justify-between items-center">
@@ -88,7 +90,6 @@ export default async function Page() {
             ))}
           </div>
         </div>
-
       </main>
     </div>
   );

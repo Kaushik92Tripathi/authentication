@@ -23,6 +23,8 @@ export default function RedirectCountdown({ redirectPath, seconds = 5 }) {
   }, [redirectPath, router, seconds]);
 
   return (
-    <p>Redirecting you in {countdown} second{countdown !== 1 ? 's' : ''}...</p>
+    <p className="text-sm text-gray-600 mt-2 font-medium">
+      Redirecting you in <span className="text-blue-600">{countdown}</span> second{countdown !== 1 ? 's' : ''}...
+    </p>
   );
 }

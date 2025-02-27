@@ -10,9 +10,6 @@ export const metadata = {
 export default async function Page() {
   const session = await auth();
   
-  // If user is already logged in, we'll show the countdown
-  // but the actual redirect will be handled by the client component
-
   return (
     <div className="flex min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="m-auto w-full max-w-md p-8 rounded-xl shadow-lg bg-white">
@@ -28,7 +25,7 @@ export default async function Page() {
               <p className="text-gray-600 mb-10">Sign in to access your dashboard</p>
               <SignInButton />
               <div className="w-full mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
-                <p>Don't have an account? Contact your administrator</p>
+                <p>Don&apos;t have an account? Contact your administrator</p>
               </div>
             </>
           )}
