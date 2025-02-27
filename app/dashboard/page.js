@@ -25,8 +25,7 @@ export default async function Page() {
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-2">
               <Image
-                src={session.user.image}
-                alt={session.user.name}
+src={session?.user?.image || "/avatar.png"}                alt={session.user.name}
                 width={40}
                 height={40}
                 className="h-10 w-10 rounded-full border-2 border-blue-200"
